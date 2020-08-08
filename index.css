@@ -439,7 +439,7 @@ body {
 /* 코딩 리스트 상세 */
 .pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li {
     width: calc(33.3333% - 20px);
-    margin: 20px 10px;
+    margin: 15px 10px;
     border: 1px solid rgba(42, 92, 122, .3);
     position: relative;
     overflow: hidden;
