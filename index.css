@@ -246,8 +246,9 @@ body {
     display: block;
 }
 
-.profile-con > .profile > .info > .info-sub > b {
+.profile-con > .profile > .info > .info-sub > p {
     width: 86px;
+    font-weight: bold;
 }
 
 .profile-con > .profile > .info > .info-sub > span {
