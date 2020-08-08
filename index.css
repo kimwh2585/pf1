@@ -317,16 +317,20 @@ body {
     transition: width 2s ease-out;
 }
 
-.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-gauge-1.active-on-visible.active::after,
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-gauge-1.active-on-visible.active::after {
+    width:80%;
+}
+
 .profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-gauge-2.active-on-visible.active::after,
-.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-gauge-3.active-on-visible.active::after,
-.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-gauge-5.active-on-visible.active::after {
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-gauge-3.active-on-visible.active::after {
     width: 85%;
 }
 
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-gauge-5.active-on-visible.active::after,
 .profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-gauge-4.active-on-visible.active::after {
-    width: 65%;
+    width:70%;
 }
+
 
 .profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-gauge-6.active-on-visible.active::after {
     width: 70%;
@@ -342,12 +346,12 @@ body {
 
 .profile-con > .profile > .skill > .skill-list > li > .skill-desc > .value-1,
 .profile-con > .profile > .skill > .skill-list > li > .skill-desc > .value-2,
-.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .value-3,
-.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .value-5 {
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .value-3 {
     color: #2a5c7a;
 }
 
 .profile-con > .profile > .skill > .skill-list > li > .skill-desc > .value-4,
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .value-5,
 .profile-con > .profile > .skill > .skill-list > li > .skill-desc > .value-6 {
     color: #24adcd;
 }
