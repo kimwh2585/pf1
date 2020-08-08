@@ -333,7 +333,7 @@ body {
 
 
 .profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-gauge-6.active-on-visible.active::after {
-    width: 70%;
+    width: 60%;
 }
 
 /* 스킬 수치값 */
