@@ -439,7 +439,7 @@ body {
 /* 코딩 리스트 상세 */
 .pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li {
     width: calc(33.3333% - 20px);
-    margin: 10px;
+    margin: 20px 10px;
     border: 1px solid rgba(42, 92, 122, .3);
     position: relative;
     overflow: hidden;
@@ -463,6 +463,21 @@ body {
 .pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a:hover::after {
     background-color: rgba(0, 0, 0, .65);
 }
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 76px;
+    height: 40px;
+    z-index: 10;
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li.copy::after {
+    background: url('./img/label_copy.png') no-repeat center;
+}
+
 
 .pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a > .inner-txt {
     position: absolute;
@@ -550,54 +565,6 @@ body {
 .pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a > .line-b {
     right: 5%;
     bottom: 5%;
-}
-
-/* 디자인 리스트 */
-.pf-con > .pf > .design > .pf-slider {
-    max-width: 816px;
-    margin: 0 auto;
-    height: 742px;
-}
-
-.pf-con > .pf > .design > .pf-slider .slick-list,
-.pf-con > .pf > .design > .pf-slider .slick-track {
-    height: 100%;
-}
-
-.pf-con > .pf > .design > .pf-slider .slick-slide {
-    font-size: 0;
-}
-
-/* 슬라이더 좌우 버튼 */
-.pf-con > .pf > .design > .pf-slider > .slick-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 26px;
-    outline: none;
-    z-index: 100;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, .3);
-    color: #fff;
-    transition: background-color .5s;
-}
-
-.pf-con > .pf > .design > .pf-slider > .slick-arrow:hover {
-    background-color: rgba(0, 0, 0, .8);
-}
-
-.pf-con > .pf > .design > .pf-slider > .prev-btn {
-    left: -40px;
-}
-
-.pf-con > .pf > .design > .pf-slider > .next-btn {
-    right: -40px;
-}
-
-.pf-con > .pf > .design > .pf-slider > .slick-arrow > i {
-    display: block;
 }
 
 
