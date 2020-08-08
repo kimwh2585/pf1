@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kim's</title>
+
+    <!-- 모바일에서 화면배율을 디바이스 크기 기준으로 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 호환성 문제를 어느정도 해결 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <!-- AOS 플러그인 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- XEIcon 폰트 불러오기 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap" rel="stylesheet">
+    <!-- css 불러오기 -->
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./common.css">
+</head>
+
+<body>
+    <!-- 시작 커튼 -->
+    <div class="start-curtain">
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- 상단 헤더 -->
+    <div class="header">
+        <div class="header-con row">
+            <nav class="gnb cell-right font">
+                <ul class="row">
+                    <li class="cell active"><a href="#page1">HOME</a></li>
+                    <li class="cell"><a href="#page2">PROFILE</a></li>
+                    <li class="cell"><a href="#page3">PORTFOLIO</a></li>
+                    <li class="cell"><a href="#page4">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="pages">
+        <!-- 메인 배너 페이지 -->
+        <section class="page" id="page1">
+            <div class="main-bn" style="background-image: url('./img/main_bn_01.jpg');">
+                <div class="inner-txt">
+                    <p class="tt font">KIMWONHEE</p>
+                    <p class="st font">portfolio</p>
+                    <span class="typing-txt">안녕하세요 웹 퍼블리셔 김원희입니다.</span>
+                    <span class="typing"></span>
+                </div>
+                <div class="scroll-down">
+                    <a href="#page2" class="block">
+                        <i class="xi-caret-down block"></i>
+                        <i class="xi-caret-down block"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 프로필 페이지 -->
+        <section class="page" id="page2">
+            <div class="profile-con">
+                <div class="profile con row">
+                    <h1 class="tt font">PROFILE</h1>
+                    <div class="info cell" data-aos="fade-left">
+                        <h2 class="st font">information</h2>
+                        <div class="img-box"><img src="./img/face.jpg" alt=""></div>
+                        <div class="info-sub row">
+                            <b class="cell">NAME</b>
+                            <span class="cell">김원희</span>
+                        </div>
+                        <div class="info-sub row">
+                            <b class="cell">BIRTH</b>
+                            <span class="cell">1996.02.06</span>
+                        </div>
+                        <div class="info-sub row">
+                            <b class="cell">PHONE</b>
+                            <span class="cell">010-2508-2585</span>
+                        </div>
+                        <div class="info-sub row">
+                            <b class="cell">EMAIL</b>
+                            <span class="cell">kimwh2585@naver.com</span>
+                        </div>
+                        <div class="info-sub row">
+                            <b class="cell">ADDRESS</b>
+                            <span class="cell">대전광역시 유성구</span>
+                        </div>
+                        <div class="info-sub row">
+                            <b class="cell">WIKI</b>
+                            <span class="cell"><a href="https://to2.kr/bpE" title="위키 바로가기" target="_blank">https://to2.kr/bpE<i class="xi-external-link"></i></a></span>
+                        </div>
+                        <div class="info-sub row">
+                            <b class="cell">EDUCATION</b>
+                            <span class="cell">목원대 컴퓨터공학과</span>
+                        </div>
+                    </div>
+                    <div class="skill cell active-on-visible" data-aos="fade-right" data-active-on-visible-delay="200" data-active-on-visible-callback-func-name="count">
+                        <h2 class="st font">skills</h2>
+                        <ul class="skill-list">
+                            <li class="cell row">
+                                <div class="skill-ico cell"><img src="./img/ico_html.png" alt=""></div>
+                                <div class="skill-desc cell">
+                                    <div class="value value-1">80%</div>
+                                    <div class="skill-gauge skill-gauge-1 active-on-visible"></div>
+                                    <span class="skill-sub">기본기 탄탄한 의미있는 구조 마크업, 웹 표준·웹 접근성에 대한 전반적인 이해</span>
+                                </div>
+                            </li>
+                            <li class="cell row">
+                                <div class="skill-ico cell"><img src="./img/ico_css.png" alt=""></div>
+                                <div class="skill-desc cell">
+                                    <div class="value value-2">85%</div>
+                                    <div class="skill-gauge skill-gauge-2 active-on-visible"></div>
+                                    <span class="skill-sub">이해도 높은 사용으로 보다 실용적인 코드 작성</span>
+                                </div>
+                            </li>
+                            <li class="cell row">
+                                <div class="skill-ico cell"><img src="./img/ico_jquery.png" alt=""></div>
+                                <div class="skill-desc cell">
+                                    <div class="value value-3">85%</div>
+                                    <div class="skill-gauge skill-gauge-3 active-on-visible"></div>
+                                    <span class="skill-sub">제이쿼리 라이브러리를 사용하여 필요한 기능 구현</span>
+                                </div>
+                            </li>
+                            <li class="cell row">
+                                <div class="skill-ico cell"><img src="./img/ico_javascript.png" alt=""></div>
+                                <div class="skill-desc cell">
+                                    <div class="value value-4">70%</div>
+                                    <div class="skill-gauge skill-gauge-4 active-on-visible"></div>
+                                    <span class="skill-sub">자바스크립트의 기본 문법 이해</span>
+                                </div>
+                            </li>
+                            <li class="cell row">
+                                <div class="skill-ico cell"><img src="./img/ico_photoshop.png" alt=""></div>
+                                <div class="skill-desc cell">
+                                    <div class="value value-5">70%</div>
+                                    <div class="skill-gauge skill-gauge-5 active-on-visible"></div>
+                                    <span class="skill-sub">기본적인 툴 사용 가능</span>
+                                </div>
+                            </li>
+                            <li class="cell row">
+                                <div class="skill-ico cell"><img src="./img/ico_illustrator.png" alt=""></div>
+                                <div class="skill-desc cell">
+                                    <div class="value value-6">60%</div>
+                                    <div class="skill-gauge skill-gauge-6 active-on-visible"></div>
+                                    <span class="skill-sub">기본적인 툴 사용 가능</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 포트폴리오 페이지 -->
+        <section class="page" id="page3">
+            <!-- 중앙 배경 -->
+            <div class="mid-bg"></div>
+            <div class="pf-con">
+                <div class="pf con">
+                    <h1 class="tt font">PORTFOLIO</h1>
+                    <div class="coding">
+                        <h2 class="st font">coding</h2>
+                        <nav class="pf-category">
+                            <ul class="row">
+                                <li class="cell font active">ALL</li>
+                                <li class="cell font">RESPONSIVE</li>
+                                <li class="cell font">WEB</li>
+                            </ul>
+                        </nav>
+                        <div class="pf-list-box" data-aos="zoom-in" data-aos-duration="1000">
+                            <div class="pf-list active">
+                                <ul class="row pf-list-inner active">
+                                    <li class="cell copy">
+                                        <a href="https://kimyang-sun.github.io/pf-site/centreville/" target="_blank">
+                                            <div class="img-box"><img src="https://kimyang-sun.github.io/pf-img/kimyangsun/pf_img_10.jpg" alt=""></div>
+                                            <div class="inner-txt">
+                                                <strong>동부센트레빌 <i class="xi-external-link"></i></strong>
+                                                <p>(사이트 모작)</p>
+                                                <p>기존 사이트를 동일하게 제작했습니다.<br>(HTML/CSS/JS &amp; jQuery)</p>
+                                            </div>
+                                            <i class="line line-t"></i>
+                                            <i class="line line-l"></i>
+                                            <i class="line line-r"></i>
+                                            <i class="line line-b"></i>
+                                        </a>
+                                    </li>
+                                    <li class="cell rede">
+                                        <a href="https://kimyang-sun.github.io/pf-site/esc/" target="_blank">
+                                            <div class="img-box"><img src="https://kimyang-sun.github.io/pf-img/kimyangsun/pf_img_09.jpg" alt=""></div>
+                                            <div class="inner-txt">
+                                                <strong>ESC 방탈출카페 리뉴얼 <i class="xi-external-link"></i></strong>
+                                                <p>(리디자인 사이트)</p>
+                                                <p>기존 사이트를 리디자인하여 제작했습니다.<br>(HTML/CSS/JS &amp; jQuery)</p>
+                                            </div>
+                                            <i class="line line-t"></i>
+                                            <i class="line line-l"></i>
+                                            <i class="line line-r"></i>
+                                            <i class="line line-b"></i>
+                                        </a>
+                                    </li>
+                                    <li class="cell copy">
+                                        <a href="https://kimyang-sun.github.io/pf-site/samsung/" target="_blank">
+                                            <div class="img-box"><img src="https://kimyang-sun.github.io/pf-img/kimyangsun/pf_img_08.jpg" alt=""></div>
+                                            <div class="inner-txt">
+                                                <strong>삼성(SAMSUNG) <i class="xi-external-link"></i></strong>
+                                                <p>(사이트 모작 / 반응형)</p>
+                                                <p>기존 사이트를 동일하게 제작했습니다.<br>(HTML/CSS/JS &amp; jQuery)</p>
+                                            </div>
+                                            <i class="line line-t"></i>
+                                            <i class="line line-l"></i>
+                                            <i class="line line-r"></i>
+                                            <i class="line line-b"></i>
+                                        </a>
+                                    </li>
+                                    <li class="cell copy">
+                                        <a href="https://kimyang-sun.github.io/pf-site/vivienne/" target="_blank">
+                                            <div class="img-box"><img src="./img/pf_img_04.jpg" alt=""></div>
+                                            <div class="inner-txt">
+                                                <strong>비비엔느 <i class="xi-external-link"></i></strong>
+                                                <p>(사이트 모작)</p>
+                                                <p>기존 사이트를 동일하게 제작했습니다.<br>(HTML/CSS/JS &amp; jQuery)</p>
+                                            </div>
+                                            <i class="line line-t"></i>
+                                            <i class="line line-l"></i>
+                                            <i class="line line-r"></i>
+                                            <i class="line line-b"></i>
+                                        </a>
+                                    </li>
+
+                                    <li class="cell copy">
+                                        <a href="https://kimyang-sun.github.io/pf-site/bnx/" target="_blank">
+                                            <div class="img-box"><img src="./img/pf_img_01.jpg" alt=""></div>
+                                            <div class="inner-txt">
+                                                <strong>BNX (첫 모작) <i class="xi-external-link"></i></strong>
+                                                <p>(사이트 모작 / 반응형)</p>
+                                                <p>기존 사이트에 필요한 부분을 추가해 제작했습니다.<br>(HTML/CSS/JS &amp; jQuery)</p>
+                                            </div>
+                                            <i class="line line-t"></i>
+                                            <i class="line line-l"></i>
+                                            <i class="line line-r"></i>
+                                            <i class="line line-b"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pf-list">
+                                <ul class="row pf-list-inner">
+                                    <li class="cell copy">
+                                        <a href="https://kimyang-sun.github.io/pf-site/bnx/" target="_blank">
+                                            <div class="img-box"><img src="./img/pf_img_01.jpg" alt=""></div>
+                                            <div class="inner-txt">
+                                                <strong>BNX (첫 모작) <i class="xi-external-link"></i></strong>
+                                                <p>(사이트 모작 / 반응형)</p>
+                                                <p>기존 사이트에 필요한 부분을 추가해 제작했습니다.<br>(HTML/CSS/JS &amp; JQuery)</p>
+                                            </div>
+                                            <i class="line line-t"></i>
+                                            <i class="line line-l"></i>
+                                            <i class="line line-r"></i>
+                                            <i class="line line-b"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pf-list">
+                                <ul class="row pf-list-inner">
+                                    <li class="cell copy">
+                                        <a href="https://kimyang-sun.github.io/pf-site/vivienne/" target="_blank">
+                                            <div class="img-box"><img src="./img/pf_img_04.jpg" alt=""></div>
+                                            <div class="inner-txt">
+                                                <strong>비비엔느 <i class="xi-external-link"></i></strong>
+                                                <p>(사이트 모작)</p>
+                                                <p>기존 사이트를 동일하게 제작했습니다.<br>(HTML/CSS/JS &amp; JQuery)</p>
+                                            </div>
+                                            <i class="line line-t"></i>
+                                            <i class="line line-l"></i>
+                                            <i class="line line-r"></i>
+                                            <i class="line line-b"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 컨택트 페이지 -->
+        <section class="page" id="page4">
+            <div class="contact-con" style="background-image: url('./img/main_bn_03.jpg');">
+                <div class="inner-txt">
+                    <h1 class="tt font">Thank you for reviewing it.</h1>
+                    <p class="sub">"이 일이 즐겁고 간절한만큼 항상 배우려는 자세로 쉼없이 노력하겠습니다."</p>
+                    <p class="sub-2">(문의사항은 문자로 보내주시면 감사하겠습니다.)</p>
+                </div>
+                <div class="ico">
+                    <ul class="row">
+                        <li class="cell"><i class="xi-call"></i><span class="block">010-2508-2585</span></li>
+                        <li class="cell"><i class="xi-kakaotalk"></i><span class="block">kimwh2585</span></li>
+                        <li class="cell"><i class="xi-mail"></i><span class="block">kimwh2585@Naver.com
+                </div>
+                <p>본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- top 버튼 -->
+    <button class="top-btn">
+        <span>
+            <i class="xi-angle-up-min"></i>
+        </span>
+    </button>
+
+    <!-- 자바스크립트 불러오기 -->
+    <script src="./index.js"></script>
+</body>
+
+</html>

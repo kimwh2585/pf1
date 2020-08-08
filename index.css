@@ -1,0 +1,712 @@
+/* 커스텀 */
+.con {
+    max-width: 1220px;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    color: #222;
+}
+
+.scrollOff {
+    overflow: hidden;
+}
+
+/* 시작 커튼 */
+.start-curtain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    visibility: visible;
+}
+
+.start-curtain > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background-color: rgb(0, 0, 0, 0.5);
+    border-bottom: 2px solid #cfcfcf;
+    transition: height .8s .5s ease-in-out;
+}
+
+.start-curtain > div:last-child {
+    top: auto;
+    bottom: 0;
+    height: 50%;
+    border-top: 2px solid #cfcfcf;
+    border-bottom: none;
+}
+
+/* 액티브된 시작 커튼 */
+.start-curtain.active {
+    visibility: hidden;
+    transition: visibility 0s 1.3s;
+}
+
+.start-curtain.active > div:first-child {
+    height: 0;
+}
+
+.start-curtain.active > div:last-child {
+    height: 0;
+}
+
+/* 상단 헤더 */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 0;
+    transition: all .5s;
+    z-index: 1000;
+}
+
+.header.not-scroll-top-0 {
+    height: 68px;
+    background-color: rgb(173, 229, 232, 1);
+}
+
+.header > .header-con {
+    max-width: 1620px;
+    margin: 0 auto;
+    font-size: 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* gnb */
+.header > .header-con > .gnb > ul > li {
+    padding: 0 20px;
+    position: relative;
+}
+
+.header > .header-con > .gnb > ul > li > a {
+    font-size: 16px;
+    display: block;
+    color: #fff;
+    margin: 27px 0 25px;
+    line-height: 1;
+    transition: opacity .1s;
+}
+
+.header > .header-con > .gnb > ul > li > a:active {
+    opacity: .5;
+}
+
+/* 메인 배너 페이지 */
+.main-bn {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.main-bn > .inner-txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    line-height: 1;
+    color: rgba(255, 255, 255, .8);
+    border: 5px solid #C3E4F2;
+    padding: 50px 80px;
+}
+
+.main-bn > .inner-txt > p {
+    letter-spacing: 1em;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.main-bn > .inner-txt.active > p {
+    opacity: 1;
+    letter-spacing: 0.1em;
+}
+
+.main-bn > .inner-txt > .tt {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.main-bn > .inner-txt > .st {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+/* 메인 배너 텍스트 타자 */
+.typing-txt {
+    display: none;
+}
+
+.typing {
+    display: inline-block;
+    animation-name: keyboard-effect;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    white-space: nowrap;
+}
+
+@keyframes keyboard-effect {
+    0% {
+        border-right: 1px solid #fff
+    }
+
+    50% {
+        border-right: 1px solid transparent
+    }
+
+    100% {
+        border-right: 1px solid #fff
+    }
+}
+
+/* 스크롤 다운 */
+.main-bn > .scroll-down {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    animation-name: scroll-down;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes scroll-down {
+    0% {
+        bottom: 5%
+    }
+
+    100% {
+        bottom: 3%
+    }
+}
+
+.main-bn > .scroll-down > a {
+    color: #fff;
+}
+
+.main-bn > .scroll-down > a > i {
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+
+/* 페이지 컨텐츠 */
+.page:not(:nth-of-type(1)) {
+    padding-top: 67px;
+}
+
+.page h1.tt {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 70px;
+    white-space: nowrap;
+}
+
+
+
+/* 프로필 페이지 */
+.profile-con {
+    padding-bottom: 100px;
+    position: relative;
+}
+
+/* 프로필 정보 */
+.profile-con > .profile > .info {
+    width: 310px;
+    position: relative;
+}
+
+/* 프로필 사진 */
+.profile-con > .profile > .info > .img-box {
+    margin-bottom: 25px;
+}
+
+/* 프로필 내용 */
+.profile-con > .profile > .info > .info-sub {
+    margin-bottom: 8px;
+}
+
+.profile-con > .profile > .info > .info-sub > .cell {
+    font-size: 14px;
+    display: block;
+}
+
+.profile-con > .profile > .info > .info-sub > b {
+    width: 86px;
+}
+
+.profile-con > .profile > .info > .info-sub > span {
+    width: calc(100% - 86px);
+}
+
+.profile-con > .profile > .info > .info-sub > .cell > a {
+    position: relative;
+}
+
+.profile-con > .profile > .info > .info-sub > .cell > a > i {
+    position: absolute;
+    top: 4px;
+    padding-left: 3px;
+}
+
+/* 스킬 */
+.profile-con > .profile > .skill {
+    width: 860px;
+    margin-left: 50px;
+    padding: 0 50px;
+}
+
+.profile-con > .profile > .skill > .st {
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+/* 스킬 목록 */
+.profile-con > .profile > .skill > .skill-list > li {
+    width: 350px;
+    padding: 15px 0;
+    margin-bottom: 100px;
+}
+
+.profile-con > .profile > .skill > .skill-list > li:nth-child(2n + 2) {
+    margin-left: 60px;
+}
+
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc {
+    width: calc(100% - 70px);
+    padding: 0 15px;
+    position: relative;
+}
+
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-sub {
+    font-size: 14px;
+}
+
+/* 스킬 게이지 바 */
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc .skill-gauge {
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, .2);
+    position: relative;
+    margin: 5px 0 15px;
+}
+
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-gauge::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #24adcd 50%, #2a5c7a 100%);
+    transition: width 2s ease-out;
+}
+
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-gauge-1.active-on-visible.active::after,
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-gauge-2.active-on-visible.active::after,
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-gauge-3.active-on-visible.active::after,
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-gauge-5.active-on-visible.active::after {
+    width: 85%;
+}
+
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-gauge-4.active-on-visible.active::after {
+    width: 65%;
+}
+
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-gauge-6.active-on-visible.active::after {
+    width: 70%;
+}
+
+/* 스킬 수치값 */
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .value {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    font-size: 18px;
+}
+
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .value-1,
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .value-2,
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .value-3,
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .value-5 {
+    color: #2a5c7a;
+}
+
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .value-4,
+.profile-con > .profile > .skill > .skill-list > li > .skill-desc > .value-6 {
+    color: #24adcd;
+}
+
+
+/* 중앙 배경 */
+.mid-bg {
+    background: url('./img/main_bn_02.jpg') no-repeat center;
+    background-size: 100%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 200px;
+}
+
+/* 포트폴리오 작업물 페이지 */
+#page3 {
+    padding-top: 0;
+}
+
+.pf-con {
+    padding-top: 70px;
+    position: relative;
+}
+
+.pf-con h2 {
+    padding: 0 10px;
+}
+
+/* 코딩 페이지 */
+.pf-con > .pf > .coding {
+    padding-bottom: 70px;
+}
+
+/* 코딩 카테고리 */
+.pf-con > .pf > .coding > .pf-category {
+    text-align: center;
+    font-size: 0;
+    position: relative;
+}
+
+.pf-con > .pf > .coding > .pf-category > span {
+    position: absolute;
+    top: -90%;
+    right: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.pf-con > .pf > .coding > .pf-category > ul {
+    display: inline-block;
+}
+
+.pf-con > .pf > .coding > .pf-category > ul > li {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    transition: color .5s;
+}
+
+.pf-con > .pf > .coding > .pf-category > ul > li:not(.active) {
+    color: #afafaf;
+}
+
+
+
+/* 코딩 리스트 */
+.pf-con > .pf > .coding > .pf-list-box > .pf-list {
+    display: none;
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list.active {
+    display: block;
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner {
+    opacity: 0;
+    transform: translateY(35px);
+    margin: 0 -10px;
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s;
+}
+
+/* 코딩 리스트 상세 */
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li {
+    width: calc(33.3333% - 20px);
+    margin: 10px;
+    border: 1px solid rgba(42, 92, 122, .3);
+    position: relative;
+    overflow: hidden;
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a {
+    display: block;
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color .5s;
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a:hover::after {
+    background-color: rgba(0, 0, 0, .65);
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a > .inner-txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0);
+    width: 100%;
+    z-index: 10;
+    transition: color .5s;
+    text-align: center;
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a:hover > .inner-txt {
+    color: rgba(255, 255, 255, 1);
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a > .inner-txt > strong {
+    font-size: 21px;
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a > .inner-txt > p {
+    font-weight: 300;
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a > .inner-txt > p:nth-of-type(1) {
+    font-size: 13px;
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a > .inner-txt > p:nth-of-type(2) {
+    font-size: 15px;
+    padding: 10px 5% 0;
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a > .img-box > img {
+    transition: transform .5s;
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a:hover > .img-box > img {
+    transform: scale(1.1);
+}
+
+/* 마우스 올렸을 시 나타나는 테두리 */
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a > .line {
+    position: absolute;
+    background-color: #fff;
+    z-index: 5;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a:hover > .line {
+    opacity: 1;
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a > .line-t,
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a > .line-b {
+    width: 0;
+    height: 1px;
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a:hover > .line-t,
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a:hover > .line-b {
+    width: 100%;
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a > .line-l,
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a > .line-r {
+    width: 1px;
+    height: 0;
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a:hover > .line-l,
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a:hover > .line-r {
+    height: 100%;
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a > .line-t,
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a > .line-l {
+    top: 5%;
+    left: 5%;
+}
+
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a > .line-r,
+.pf-con > .pf > .coding > .pf-list-box > .pf-list > .pf-list-inner > li > a > .line-b {
+    right: 5%;
+    bottom: 5%;
+}
+
+/* 디자인 리스트 */
+.pf-con > .pf > .design > .pf-slider {
+    max-width: 816px;
+    margin: 0 auto;
+    height: 742px;
+}
+
+.pf-con > .pf > .design > .pf-slider .slick-list,
+.pf-con > .pf > .design > .pf-slider .slick-track {
+    height: 100%;
+}
+
+.pf-con > .pf > .design > .pf-slider .slick-slide {
+    font-size: 0;
+}
+
+/* 슬라이더 좌우 버튼 */
+.pf-con > .pf > .design > .pf-slider > .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 26px;
+    outline: none;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .3);
+    color: #fff;
+    transition: background-color .5s;
+}
+
+.pf-con > .pf > .design > .pf-slider > .slick-arrow:hover {
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.pf-con > .pf > .design > .pf-slider > .prev-btn {
+    left: -40px;
+}
+
+.pf-con > .pf > .design > .pf-slider > .next-btn {
+    right: -40px;
+}
+
+.pf-con > .pf > .design > .pf-slider > .slick-arrow > i {
+    display: block;
+}
+
+
+/* 컨텍트 페이지 */
+.contact-con {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding: 90px 0;
+}
+
+/* 내부 텍스트 */
+.contact-con > .inner-txt {
+    color: #fff;
+}
+
+.contact-con > .inner-txt > .tt {
+    padding-bottom: 20px;
+}
+
+.contact-con > .inner-txt > p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* 컨택트 페이지 컨택트 아이콘 */
+.contact-con > .ico {
+    text-align: center;
+    font-size: 0;
+    margin-top: 80px;
+}
+
+.contact-con > .ico > ul {
+    display: inline-block;
+    width: 800px;
+}
+
+.contact-con > .ico > ul > li {
+    width: 33.3333%;
+    position: relative;
+}
+
+.contact-con > .ico > ul > li > i {
+    font-size: 30px;
+    color: rgba(255, 255, 255, .3);
+    transition: color .8s;
+}
+
+.contact-con > .ico > ul > li:hover > i {
+    color: rgba(255, 255, 255, .8);
+}
+
+.contact-con > .ico > ul > li > span {
+    font-size: 15px;
+    font-weight: 300;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .8s;
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    color: rgba(255, 255, 255, .8);
+}
+
+.contact-con > .ico > ul > li:hover > i + span {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 마지막 */
+.contact-con > p {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, .6);
+    text-align: center;
+    padding-top: 60px;
+}
+
+
+/* 위로가는 버튼 */
+.top-btn {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(42, 92, 122, .7);
+    cursor: pointer;
+    display: none;
+}
+
+.top-btn > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+.top-btn > span > i {
+    font-size: 32px;
+    color: #fff;
+    transition: color .3s;
+}
+
+.top-btn:hover > span > i {
+    color: gold;
+}
