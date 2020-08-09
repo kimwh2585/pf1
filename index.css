@@ -108,6 +108,7 @@ body {
     width: 100%;
     height: 100vh;
     position: relative;
+    -ms-display:block;
 }
 
 .main-bn > .inner-txt {
@@ -319,7 +320,7 @@ body {
 }
 
 .profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-gauge-1.active-on-visible.active::after {
-    width:80%;
+    width: 80%;
 }
 
 .profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-gauge-2.active-on-visible.active::after,
@@ -329,7 +330,7 @@ body {
 
 .profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-gauge-5.active-on-visible.active::after,
 .profile-con > .profile > .skill > .skill-list > li > .skill-desc > .skill-gauge-4.active-on-visible.active::after {
-    width:70%;
+    width: 70%;
 }
 
 
