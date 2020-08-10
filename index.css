@@ -92,12 +92,11 @@ body {
     display: block;
     color: #fff;
     margin: 27px 0 25px;
-    line-height: 1;
     transition: opacity .1s;
 }
 
 .header > .header-con > .gnb > ul > li > a:active {
-    opacity: .5;
+    opacity:1;
 }
 
 /* 메인 배너 페이지 */
