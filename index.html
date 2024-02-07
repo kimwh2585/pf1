@@ -101,7 +101,8 @@
             } 
             else if (isAndroid()) {
                 if (action === 'install') {
-                    window.location.href = 'https://play.google.com/store/apps/details?id=com.sampleapp';
+                    window.location.href = 'com.sampleapp://';
+                    // window.location.href = 'https://play.google.com/store/apps/details?id=com.sampleapp';
                 } else if (action === 'open') {
                     // 앱이 설치되어 있는지 확인
                     isAppInstalled('com.sampleapp').then(function(installed) {
