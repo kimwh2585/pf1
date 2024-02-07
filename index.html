@@ -83,7 +83,7 @@
         }
 
         // 버튼 클릭을 처리하는 함수
-        function handleClick(action) {
+       function handleClick(action) {
             if (isIOS()) {
                 if (action === 'install') {
                     // IOS에서 앱 설치를 위해 App Store로 리디렉션
@@ -101,19 +101,20 @@
             } 
             else if (isAndroid()) {
                 if (action === 'install') {
-                    window.location.href = 'https://play.google.com/store/apps/details?id=com.hwadamsup.app';
+                    window.location.href = 'https://play.google.com/store/apps/details?id=com.sampleapp';
                 } else if (action === 'open') {
                     // 앱이 설치되어 있는지 확인
-                    isAppInstalled('com.hwadamsup.app').then(function(installed) {
+                    isAppInstalled('com.sampleapp').then(function(installed) {
                         if (installed) {
                             // 설치되어 있다면 앱 열기
-                            window.location.href = 'com.hwadamsup.app://';
+                            window.location.href = 'com.sampleapp://';
                         } else {
                             // 설치되어 있지 않다면 다른 동작 수행
-                            window.location.href = 'https://play.google.com/store/apps/details?id=com.hwadamsup.app';
+                            window.location.href = 'https://play.google.com/store/apps/details?id=com.sampleapp';
                         }
                     }).catch(function(error) {
                         console.error('Error checking app installation:', error);
+                        alert(error);
                     });
                 }
             }
