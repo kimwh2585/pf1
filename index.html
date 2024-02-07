@@ -89,14 +89,13 @@
                 if (action === 'install') {
                     // IOS에서 앱 설치를 위해 App Store로 리디렉션
                     window.location.href = 'https://apps.apple.com/us/app/com.hwadamsup.app';
-                    alert('IOS 앱 설치 페이지로 이동');
                 } else if (action === 'open') {
                     // IOS에서 앱을 열 때, 앱이 설치되어 있는지 확인 후 열거나 설치 페이지로 리디렉션
                     if (isAppInstalled('com.hwadamsup.app://')) {
-                        alert('실행');
+                        alert('oooo');
                         window.location.href = 'com.hwadamsup.app://';
                     } else {
-                        alert('안깔려있음')
+                        alert('xxxx')
                         window.location.href = 'https://apps.apple.com/us/app/com.hwadamsup.app'; 
                     }
                 }
@@ -111,9 +110,11 @@
                     isAppInstalled('smartbaedal').then(function(installed) {
                         if (installed) {
                             // 설치되어 있다면 앱 열기
+                            alert('oooo');
                             window.location.href = 'smartbaedal://';
                         } else {
                             // 설치되어 있지 않다면 다른 동작 수행
+                            alert('xxxx');
                             window.location.href = 'https://play.google.com/store/apps/details?id=com.sampleapp';
                         }
                     }).catch(function(error) {
