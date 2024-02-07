@@ -93,18 +93,18 @@
                     // IOS에서 앱을 열 때, 앱이 설치되어 있는지 확인 후 열거나 설치 페이지로 리디렉션
                     if (isAppInstalled('com.hwadamsup.app://')) {
                         window.location.href = 'com.hwadamsup.app://';
-                        alert('깔려있음');
                     } else {
-                        alert('안깔려있음');
+                        alert('안깔려있음')
                         window.location.href = 'https://apps.apple.com/us/app/com.hwadamsup.app'; 
                     }
                 }
-            } else if (isAndroid()) {
+            } 
+            else if (isAndroid()) {
                 if (action === 'install') {
                     // Android에서 앱 설치를 위해 Play Store로 리디렉션
                     window.location.href = 'https://play.google.com/store/apps/details?id=com.sampleapp';
-                    alert('Android 앱 설치 페이지로 이동');
                 } else if (action === 'open') {
+                    // IOS에서 앱을 열 때, 앱이 설치되어 있는지 확인 후 열거나 설치 페이지로 리디렉션
                     if (isAppInstalled('com.sampleapp://')) {
                         alert('앱 깔려있음');
                         window.location.href = 'com.sampleapp://';
