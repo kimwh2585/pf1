@@ -82,6 +82,7 @@
             return /Android/.test(navigator.userAgent);
         }
 
+
         // 버튼 클릭을 처리하는 함수
         function handleClick(action) {
             if (isIOS()) {
@@ -92,6 +93,7 @@
                 } else if (action === 'open') {
                     // IOS에서 앱을 열 때, 앱이 설치되어 있는지 확인 후 열거나 설치 페이지로 리디렉션
                     if (isAppInstalled('com.hwadamsup.app://')) {
+                        alert('실행');
                         window.location.href = 'com.hwadamsup.app://';
                     } else {
                         alert('안깔려있음')
