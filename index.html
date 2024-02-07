@@ -83,7 +83,7 @@
         }
 
         // 버튼 클릭을 처리하는 함수
-       function handleClick(action) {
+        function handleClick(action) {
             if (isIOS()) {
                 if (action === 'install') {
                     // IOS에서 앱 설치를 위해 App Store로 리디렉션
@@ -105,7 +105,7 @@
                     window.location.href = 'https://play.google.com/store/apps/details?id=com.sampleapp';
                 } else if (action === 'open') {
                     // 앱이 설치되어 있는지 확인
-                    isAppInstalled('smartbaedal').then(function(installed) {
+                    isAppInstalled('com.sampleapp').then(function(installed) {
                         if (installed) {
                             // 설치되어 있다면 앱 열기
                             window.location.href = 'smartbaedal://';
