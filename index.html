@@ -110,7 +110,8 @@
                             window.location.href = 'com.sampleapp://';
                         } else {
                             // 설치되어 있지 않다면 다른 동작 수행
-                            window.location.href = 'https://play.google.com/store/apps/details?id=com.sampleapp';
+                            // window.location.href = 'https://play.google.com/store/apps/details?id=com.sampleapp';
+                            alert('앱 안깔려있음');
                         }
                     }).catch(function(error) {
                         console.error('Error checking app installation:', error);
