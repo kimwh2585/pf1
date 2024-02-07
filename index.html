@@ -83,18 +83,22 @@
         }
 
         // 버튼 클릭을 처리하는 함수
+        // 버튼 클릭을 처리하는 함수
         function handleClick(action) {
             if (isIOS()) {
                 if (action === 'install') {
                     // 앱 설치를 위해 App Store로 리디렉션
-                    window.location.href = 'https://apps.apple.com/us/app/your-app-id';
+                    // window.location.href = 'https://apps.apple.com/us/app/your-app-id';
+                    window.location.href = 'https://www.naver.com/';
                     alert('IOS 실행');
                 } else if (action === 'open') {
                     window.location.href = 'yourapp://';
+                    
                 }
             } else if (isAndroid()) {
                 if (action === 'install') {
-                    window.location.href = 'https://play.google.com/store/apps/details?id=your.app.package';
+                    // window.location.href = 'https://play.google.com/store/apps/details?id=your.app.package';
+                    window.location.href = 'https://www.naver.com/';
                     alert('안드로이드 실행')
                 } else if (action === 'open') {
                     window.location.href = 'yourapp://';
