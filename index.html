@@ -98,14 +98,15 @@
                         window.location.href = 'https://apps.apple.com/us/app/com.hwadamsup.app'; 
                     }
                 }
-            } 
+            }
+            // 배달의 민족으로 임시 테스트했습니다!
             else if (isAndroid()) {
                 if (action === 'install') {
                     // window.location.href = 'smartbaedal://';
                     window.location.href = 'https://play.google.com/store/apps/details?id=com.sampleapp';
                 } else if (action === 'open') {
                     // 앱이 설치되어 있는지 확인
-                    isAppInstalled('com.sampleapp').then(function(installed) {
+                    isAppInstalled('smartbaedal').then(function(installed) {
                         if (installed) {
                             // 설치되어 있다면 앱 열기
                             window.location.href = 'smartbaedal://';
