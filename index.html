@@ -105,14 +105,13 @@
                     // window.location.href = 'https://play.google.com/store/apps/details?id=com.sampleapp';
                 } else if (action === 'open') {
                     // 앱이 설치되어 있는지 확인
-                    isAppInstalled('com.sampleapp').then(function(installed) {
+                    isAppInstalled('smartbaedal').then(function(installed) {
                         if (installed) {
                             // 설치되어 있다면 앱 열기
-                            window.location.href = 'com.sampleapp://';
+                            window.location.href = 'smartbaedal://';
                         } else {
                             // 설치되어 있지 않다면 다른 동작 수행
-                            // window.location.href = 'https://play.google.com/store/apps/details?id=com.sampleapp';
-                            alert('앱 안깔려있음');
+                            window.location.href = 'https://play.google.com/store/apps/details?id=com.sampleapp';
                         }
                     }).catch(function(error) {
                         console.error('Error checking app installation:', error);
